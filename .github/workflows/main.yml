@@ -15,4 +15,4 @@ jobs:
     - run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "P@ssw0rd!" -Force)
     - name: Create Tunnel
       run: curl -fsSL https://get.telebit.io | bash
-    - name: telebit tcp 9000
+    - name: telebit tcp 3830
