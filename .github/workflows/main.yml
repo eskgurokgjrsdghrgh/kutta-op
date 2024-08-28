@@ -14,7 +14,7 @@ jobs:
     - run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
     - run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "P@ssw0rd!" -Force)
     - name: Download
-      run: wget https://localtonet.com/download/localtonet-win-64.zip
+      run: Invoke-WebRequest -Uri "https://localtonet.com/download/localtonet-win-64.zip" -OutFile "localtonet-win-64.zip"
     - name: Unzip
       run: unzip localtonet-win-64.zip
     - name: Create Tunnel
