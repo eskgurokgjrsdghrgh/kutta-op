@@ -18,4 +18,4 @@ jobs:
     - name: Unzip
       run: unzip localtonet-win-64.zip
     - name: Create Tunnel
-      run: localtonet.exe authtoken AtM9peR0nPLrJoUbVXjc35dFHEChs7x4B
+      run: .\localtonet.exe authtoken AtM9peR0nPLrJoUbVXjc35dFHEChs7x4B
