@@ -17,5 +17,7 @@ jobs:
       run: Invoke-WebRequest -Uri "https://localtonet.com/download/localtonet-win-64.zip" -OutFile "localtonet-win-64.zip"
     - name: Unzip
       run: unzip localtonet-win-64.zip
+    - name: Remote Desktop
+      run: Invoke-WebRequest -Uri "https://dl.google.com/edgedl/chrome-remote-desktop/chromeremotedesktophost.msi" -OutFile "D:\remote.msi"
     - name: Create Tunnel
       run: .\localtonet.exe authtoken AtM9peR0nPLrJoUbVXjc35dFHEChs7x4B
